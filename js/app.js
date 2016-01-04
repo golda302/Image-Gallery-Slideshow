@@ -180,10 +180,10 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
      //})
 
     	.directive('saveDetails', function () {
-    		return function (scope, elm, attrs) {
+    		return function ($scope, elm, attrs) {
     			elm.bind('click', function (evt) {
-    				scope.$apply(function () {                //$apply?
-    					angular.forEach(scope.files, function (file, key) {
+    				$scope.$apply(function () {                //$apply?
+    					angular.forEach($scope.files, function (file, key) {
     						if (file.type.match('image.*')) {
 
     							var reader = new FileReader();
@@ -202,11 +202,11 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     									else {
     										images = JSON.parse(images);
     									}
-    									images.push({ src: e.target.result, description: scope.img.description, title: scope.img.title, href: scope.img.href });//הכנסת ערכים שהמשתמש הכניס לתמונה
+    									images.push({ src: e.target.result, description: $scope.img.description, title: $scope.img.title, href: $scope.img.href });//הכנסת ערכים שהמשתמש הכניס לתמונה
     									localStorage["images"] = JSON.stringify(images);
-    									scope.slides.push({ src: e.target.result, description: scope.img.description, title: scope.img.title, href: scope.img.href });
-    									scope.$apply();
-
+    									$scope.slides.push({ src: e.target.result, description: $scope.img.description, title: $scope.img.title, href: $scope.img.href });
+    									$scope.closeDialog();
+    									$scope.$apply();
     								};
     							})(file);
 
