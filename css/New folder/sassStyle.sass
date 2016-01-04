@@ -1,0 +1,201 @@
+﻿body {
+
+
+
+
+.slide-container {
+	height: 100px;
+	position: relative;
+	width: 100%;
+	height: 200px;
+
+
+	.> * {
+		display: block;
+		padding: 10px;
+	}
+
+.slide-hide, .slide-show {
+	overflow-y: hidden;
+	max-height: 100px; /* approximate max height */
+	min-height: 50px;
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: linear;
+}
+
+.slide-hide {
+	position: relative;
+	top: 0;
+}
+/* class שמור?*/
+	.slide-hide.slide-hide-active {
+		position: absolute;
+		top: -100px;
+	}
+
+.slide-show {
+	position: absolute;
+	top: 100px;
+}
+
+	.slide-show.slide-show-active {
+		position: relative;
+		top: 0px;
+	}
+
+
+    #reapeatDiv{ 
+        
+        a {    color: #00005C;
+    text-decoration: none;
+    position: absolute;
+    bottom: 78px;
+    font-size: 50px;
+    /* margin-left: 627px; */
+    margin-top: 17px;
+    margin-bottom: 17px;
+    background-color: white;
+    height: 63px;
+    opacity: 0.5;
+    right: 50px;
+}
+ label {
+	color: white;
+    top: 100px;
+    left: 50px;
+    display: block;
+    margin-bottom: 5px;
+    position: absolute;
+    font-size: 102px;
+}}
+
+    .formDialog {
+	position: absolute;
+	top: 16px;
+	left: -199px;
+	z-index: 1;
+	width: 300px;
+	height: 244px;
+	margin-left: 300px;
+	border-radius: 27px;
+	background-color: #00002C;
+	border-style: solid;
+    border-color: white;
+
+ div {
+		padding: 40px;
+	}}
+
+    .arrow {
+	position: absolute;
+	z-index: 1002;
+	display: block;
+	top: 50%;
+	margin-top: -35px;
+	width: 36px;
+	height: 71px;
+	outline: none;
+	cursor: pointer;
+	background: url(../assets/img/blank.gif) no-repeat;
+
+
+	.prev {
+		opacity: 0.2;
+		left: 20px;
+		background-image: url(../assets/img/paddle_prev_999.png);
+		transition: 0.2s linear all;
+        :hover {
+		opacity: 1;
+		background-image: url(../assets/img/paddle_prev_fff.png);
+	}
+	}
+
+	.next {
+		opacity: 0.2;
+		right: 20px;
+		background-image: url(../assets/img/paddle_next_999.png);
+		transition: 0.2s linear all;
+        :hover {
+		opacity: 1;
+		background-image: url(../assets/img/paddle_next_fff.png);
+	}
+	}
+
+	.nav {
+	text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: 15px;
+    right: 0;
+    height: 22%;
+
+
+.nonDraggableImage {
+	-webkit-user-drag: none;
+}
+
+p
+{
+        color: white;
+    }
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: 1em 0 .8em;
+	height: 200px; /*לא היה */
+}
+
+ ul {
+	margin: 0;
+	width: 100%;
+	overflow-x: scroll;
+}
+
+.dot,  .dot a {
+	display: inline-block;
+	zoom: 1;
+}}
+
+
+
+
+
+    .dots .dot {
+	position: relative;
+	margin: 0 12px;
+	width: 130px;
+	height: 100%;
+
+	 .dot a {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 6px;
+		height: 6px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		background: #FFF;
+		border: 1px solid transparent;
+		outline: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-transition: background-color 0.25s, border-color 0.25s;
+		-moz-transition: background-color 0.25s, border-color 0.25s;
+		transition: background-color 0.25s, border-color 0.25s;
+	
+
+		 .active {
+			border-color: #FFF;
+			background-color: transparent;
+		}}
+	
+        }}
