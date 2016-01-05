@@ -1,20 +1,25 @@
 angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     .controller('MainCtrl', function ($scope) {
     	$scope.slides = [
-							{ src: 'images/img00.jpg', description: 'Image 00', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img01.jpg', description: 'Image 01', href: 'http://sass-lang.com/', title: "sass" },
-							{ src: 'images/img02.jpg', description: 'Image 02', href: 'Image 02href', title: "title" },
-							{ src: 'images/img03.jpg', description: 'Image 03', href: 'Image 03href', title: "title" },
-							{ src: 'images/img04.jpg', description: 'Image 04', href: 'Image 01href', title: "title" },
-							{ src: 'images/img05.jpg', description: 'Image 05', href: 'Image 02href', title: "title" },
-							{ src: 'images/img06.jpg', description: 'Image 06', href: 'Image 03href', title: "title" },
-							{ src: 'images/img07.jpg', description: 'Image 07', href: 'Image 02href', title: "title" },
-							{ src: 'images/img08.jpg', description: 'Image 08', href: 'Image 03href', title: "title" },
-							{ src: 'images/img09.jpg', description: 'Image 09', href: 'Image 01href', title: "title" },
-							{ src: 'images/img10.jpg', description: 'Image 05', href: 'Image 02href', title: "title" },
-							{ src: 'images/img11.jpg', description: 'Image 06', href: 'Image 03href', title: "title" },
+							{ src: 'images/img00.jpg', description: 'flowers', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img01.jpg', description: 'mountains', href: 'http://sass-lang.com/', title: "sass" },
+							{ src: 'images/img02.jpg', description: 'summer', href: 'http://wowslider.com/', title: "wowslider" },
+							{ src: 'images/img03.jpg', description: 'sea animal', href: 'http://wowslider.com/', title: "wowslider" },
+							{ src: 'images/img04.jpg', description: 'wonderful tira', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img05.jpg', description: 'pingwins', href: 'http://sass-lang.com/', title: "sass" },
+							{ src: 'images/img06.jpg', description: 'yellow flowers', href: 'http://wowslider.com/', title: "wow slider" },
+							{ src: 'images/img07.jpg', description: 'ship', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img08.jpg', description: 'beatch', href: 'http://sass-lang.com/', title: "title" },
+							{ src: 'images/img09.jpg', description: 'snow', href: 'http://wowslider.com/', title: "wowslider" },
+							{ src: 'images/img10.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img11.jpg', description: 'sass', href: 'http://sass-lang.com/', title: "sass" },
+							{ src: 'images/img13.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img16.jpg', description: 'sass', href: 'http://sass-lang.com/', title: "sass" },
+							{ src: 'images/img18.jpg', description: 'wowslider', href: 'http://wowslider.com/', title: "wowslider" },
+							{ src: 'images/img19.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img20.jpg', description: 'Image 17', href: 'http://wowslider.com/', title: "wowslider" },
     	];
-    	$scope.img = {};
+    	$scope.img = {};//for erase content form if null
     	$scope.accessability = false; //defult for black-white button 
     	var images = localStorage["images"]; //take the images from lacal storage
     	if (images != undefined) {
@@ -28,7 +33,7 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
 
     	//set the current slide to middle
     	$scope.setCurrentSlideIndex = function (index) {
-    		var nummoves = Math.abs(index - 2);
+    		var nummoves = Math.abs(index -2);
     		if (index > 2) {
     			for (var i = 0; i < nummoves; i++) {
     				$scope.slides.push({ src: $scope.slides[0].src, description: $scope.slides[0].description, href: $scope.slides[0].href, title: $scope.slides[0].title });
@@ -119,65 +124,7 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     		}
     	};
     })
-     //.animation('.slidesmall', function () {
-     //	return {
-     //		enter: function (element, className, done) {
-     //			var scope = element.scope();
-
-     //			if (className == 'ng-hide') {
-     //				var finishPoint = element.parent().width();
-     //				if (scope.direction !== 'right') {
-     //					finishPoint = -finishPoint;
-     //				}
-     //				TweenMax.to(element, 0.5, { left: finishPoint, onComplete: done });
-     //			}
-     //			else {
-     //				done();
-     //			}
-     //		},
-     //		leave: function (element, className, done) {
-     //			var scope = element.scope();
-
-     //			if (className == 'ng-hide') {
-     //				element.removeClass('ng-hide');
-
-     //				var startPoint = element.parent().width();
-     //				if (scope.direction === 'right') {
-     //					startPoint = -startPoint;
-     //				}
-
-     //				TweenMax.fromTo(element, 0.5, { left: startPoint }, { left: 0, onComplete: done });
-     //			}
-     //			else {
-     //				done();
-     //			}
-     //		}
-     //	};
-     //})
-
-     //.animation('.img-wrap', function () {
-     //	return {
-     //		// make note that other events (like addClass/removeClass)
-     //		// have different function input parameters
-     //		enter: function (element, doneFn) {
-     //			//	jQuery(element).fadeIn(1000, doneFn);
-
-     //			// remember to call doneFn so that angular
-     //			// knows that the animation has concluded
-     //		},
-
-     //		move: function (element, doneFn) {
-     //			//	jQuery(element).fadeIn(1000, doneFn);
-     //		},
-
-     //		leave: function (element, doneFn) {
-     //			$.each(element, function (key, value) {
-     //				TweenMax.fromTo(value, 0.5, { left: 0 }, { left: -$(value).width()-20, onComplete: doneFn });
-
-     //			});
-     //		}
-     //	}
-     //})
+     
 
     	.directive('saveDetails', function () {
     		return function ($scope, elm, attrs) {
@@ -220,9 +167,7 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     			});
     		};
     	})
-//.directive('toggle1', function ($scope) {
-//  	$scope.hidden = false;
-//  })
+
 
 //enter the file to scope
     .directive('filelistBind', function () {
@@ -234,19 +179,7 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     		});
     	};
     });
-//.directive('showonhoverparent',
-//   function () {
-//   	return {
-//   		link: function (scope, element, attrs) {
-//   			element.parent().bind('mouseenter', function () {
-//   				element.show();
-//   			});
-//   			element.parent().bind('mouseleave', function () {
-//   				element.hide();
-//   			});
-//   		}
-//   	};
-//   });
+
 
 
 

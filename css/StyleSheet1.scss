@@ -23,7 +23,7 @@
 
 		a {
 			color: #00005C;
-			text-decoration: none;
+			text-decoration: underline;
 			position: absolute;
 			bottom: 8px;
 			font-size: 50px;
@@ -32,7 +32,7 @@
 			margin-bottom: 17px;
 			background-color: white;
 			height: 63px;
-			opacity: 0.5;
+			/*opacity: 0.5;*/
 			right: 140px;
 		}
 
@@ -58,18 +58,16 @@
 		}
 	}
 
-	.formDialog {
-		position: absolute;
-		top: 16px;
-		left: -199px;
-		z-index: 1;
-		width: 300px;
-		height: 244px;
-		margin-left: 300px;
-		border-radius: 27px;
-		background-color: #00002C;
-		border-style: solid;
-		border-color: white;
+	.formDialog {position: absolute;
+    top: 83px;
+    left: -61px;
+    z-index: 1;
+    width: 300px;
+    height: 244px;
+    margin-left: 300px;
+    border-radius: 27px;
+    background-color: whitesmoke;
+    border-style: solid;
 
 		div {
 			padding: 40px;
@@ -77,17 +75,19 @@
 	}
 
 	.nav {
+	position: relative;
+height: auto;
 		width: 3312.5px;
 		padding-bottom: 30px;
 		background-image: none;
 		text-align: center;
 		display: block;
-		position: absolute;
+		/*position: absolute;*/
 		z-index: 1002;
 		left: 0;
 		bottom: 15px;
 		right: 0;
-		height: 22%;
+		/*height: 22%;*/
 
 		span {
 			color: #818181;
@@ -131,7 +131,7 @@
 			margin-right: 30px;
 			float: left;
 			min-width: 155px;
-			height: 290px;
+			/*height: 290px;*/
 			margin-top: 10px;
 			width: 265px;
 			position: relative;
@@ -139,7 +139,7 @@
 			display: inline-block;
 			position: relative;
 			margin-left: 0px;
-
+			height: 254px;
 
 			&:hover {
 				position: relative;
@@ -207,8 +207,9 @@
 	}
 
 	img {
+	height: 68.6%;
 		width: 100%;
-		height: 60%;
+		/*height: 60%;*/
 	}
 }
 
@@ -302,6 +303,7 @@ p {
 	background: #222;
 
 	button {
+	border: none;
 		background-color: initial;
 		color: white;
 		height: 100%;
@@ -322,10 +324,11 @@ p {
 }
 
 .arrow.prev {
-	opacity: 0.2;
-	left: 20px;
-	background-image: url(../assets/img/paddle_prev_999.png);
-	transition: 0.2s linear all;
+opacity: 0.99;
+    left: 20px;
+    background-image: url(../assets/img/paddle_prev_fff.png);
+    transition: 0.2s linear all;
+    background-color: lightgrey;
 
 	&:hover {
 		opacity: 1;
@@ -334,11 +337,11 @@ p {
 }
 
 .arrow.next {
-	opacity: 0.2;
-	right: 20px;
-	background-image: url(../assets/img/paddle_next_999.png);
-	transition: 0.2s linear all;
-
+opacity: 0.99;
+    right: 20px;
+    background-image: url(../assets/img/paddle_next_999.png);
+    transition: 0.2s linear all;
+    background-color: lightgrey;
 	&:hover {
 		opacity: 1;
 		background-image: url(../assets/img/paddle_next_fff.png);
