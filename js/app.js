@@ -1,26 +1,19 @@
 angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     .controller('MainCtrl', function ($scope) {
     	$scope.slides = [
-							{ src: 'images/img00.jpg', description: 'flowers', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img01.jpg', description: 'mountains', href: 'http://sass-lang.com/', title: "sass" },
-							{ src: 'images/img02.jpg', description: 'summer', href: 'http://wowslider.com/', title: "wowslider" },
-							{ src: 'images/img03.jpg', description: 'sea animal', href: 'http://wowslider.com/', title: "wowslider" },
-							{ src: 'images/img04.jpg', description: 'wonderful tira', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img05.jpg', description: 'pingwins', href: 'http://sass-lang.com/', title: "sass" },
-							{ src: 'images/img06.jpg', description: 'yellow flowers', href: 'http://wowslider.com/', title: "wow slider" },
-							{ src: 'images/img07.jpg', description: 'ship', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img08.jpg', description: 'beatch', href: 'http://sass-lang.com/', title: "title" },
-							{ src: 'images/img09.jpg', description: 'snow', href: 'http://wowslider.com/', title: "wowslider" },
-							{ src: 'images/img10.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img11.jpg', description: 'sass', href: 'http://sass-lang.com/', title: "sass" },
-							{ src: 'images/img13.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img16.jpg', description: 'sass', href: 'http://sass-lang.com/', title: "sass" },
-							{ src: 'images/img18.jpg', description: 'wowslider', href: 'http://wowslider.com/', title: "wowslider" },
-							{ src: 'images/img19.jpg', description: 'w3schools', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
-							{ src: 'images/img20.jpg', description: 'Image 17', href: 'http://wowslider.com/', title: "wowslider" },
+							{ src: 'images/img00.jpg', description: 'love you', href: 'http://www.w3schools.com/css/css_align.asp', title: "love you" },
+							{ src: 'images/img02.jpg', description: 'The peanuts movie', href: 'http://wowslider.com/', title: "The peanuts movie" },
+							{ src: 'images/img03.jpg', description: 'alvin and the chipmunks', href: 'http://wowslider.com/', title: "alvin and the chipmunks" },
+							{ src: 'images/img04.jpg', description: 'wonderful tira', href: 'http://www.w3schools.com/css/css_align.asp', title: "wonderful tira" },
+							{ src: 'images/img05.jpg', description: 'independes day:resurgence', href: 'http://sass-lang.com/', title: "independes day:resurgence" },
+							{ src: 'images/img06.jpg', description: 'ice age collision course', href: 'http://wowslider.com/', title: "ice age collision course" },
+							{ src: 'images/img07.jpg', description: 'not afraid', href: 'http://www.w3schools.com/css/css_align.asp', title: "not afraid" },
+							{ src: 'images/img08.jpg', description: 'beatch', href: 'http://sass-lang.com/', title: "beatch" },
+							{ src: 'images/img10.jpg', description: 'nice to see', href: 'http://www.w3schools.com/css/css_align.asp', title: "w3schools" },
+							{ src: 'images/img16.jpg', description: 'far from here', href: 'http://sass-lang.com/', title: "far from here" },
+							
     	];
     	$scope.img = {};//for erase content form if null
-    	$scope.accessability = false; //defult for black-white button 
     	var images = localStorage["images"]; //take the images from lacal storage
     	if (images != undefined) {
     		var images = JSON.parse(images);
@@ -34,7 +27,7 @@ angular.module('website', ['ngAnimate'])//ngAnimate', 'ngTouch'
     	//set the current slide to middle
     	$scope.setCurrentSlideIndex = function (index) {
     		var nummoves = Math.abs(index -2);
-    		if (index > 2) {
+    		if (index >2) {//set mooving direction
     			for (var i = 0; i < nummoves; i++) {
     				$scope.slides.push({ src: $scope.slides[0].src, description: $scope.slides[0].description, href: $scope.slides[0].href, title: $scope.slides[0].title });
     				$scope.slides.splice($scope.slides[0], 1);
